@@ -13,9 +13,10 @@ namespace Numbro {
         private const string minus = "minus";
 
         public static string Convert(int number) {
-            if (number < 0)
-                return $"{minus} {ConvertInside (-number)}";
-            return number <= 1 ? UnitsMap[number] : ConvertInside (number);
+            var words = number < 0 ? minus + " " : string.Empty;
+            number = Math.Abs (number);
+            words += number <= 1 ? UnitsMap[number] : ConvertInside (number);
+            return words;
         }
 
         // todo: Rename this method really...

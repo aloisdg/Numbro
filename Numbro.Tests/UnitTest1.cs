@@ -5,6 +5,8 @@ using Xunit;
 namespace Numbro.Tests {
     public class UnitTest1 {
         [Theory]
+        [InlineData (-42, "minus kvardek du")]
+        [InlineData (-1, "minus unu")]
         [InlineData (0, "nul")] // nulo? https://en.wikibooks.org/wiki/Esperanto:_A_Complete_and_Comprehensive_Grammar/Numbers
         [InlineData (1, "unu")]
         [InlineData (2, "du")]
