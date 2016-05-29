@@ -36,8 +36,16 @@ namespace Numbro {
             return toWords;
         }
 
+        public static string ConvertToOrdinal(int number) {
+            return Convert (number) + "a";
+        }
+
         public static string ToWords(this int number) {
             return Convert (number);
+        }
+
+        public static string ToOrdinalWords(this int number) {
+            return ConvertToOrdinal (number);
         }
     }
 }
