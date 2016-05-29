@@ -3,7 +3,7 @@ using System;
 using Xunit;
 
 namespace Numbro.Tests {
-    public class UnitTest1 {
+    public class NumberToWordsTest {
         [Theory]
         [InlineData (-42, "minus kvardek du")]
         [InlineData (-1, "minus unu")]
