@@ -4,6 +4,8 @@ Humanize stuff with esperanto culture in mind
 
 [![Build status](https://ci.appveyor.com/api/projects/status/nn6diwe9ip404g5h?svg=true)](https://ci.appveyor.com/project/aloisdg/numbro)
 
+[![demo gif](https://j.gifs.com/ERm0RW.gif)](https://www.youtube.com/watch?v=6hu93nFedms)
+
 You can try a demo of this code on [.NETFiddle](https://dotnetfiddle.net/7503Yh).
 
 ## Acknowledgement
