@@ -27,13 +27,22 @@ namespace Numbro {
             var parts = new List<string> ();
             foreach (var item in TensMap.Where (x => number / x.Key > 0)) {
                 parts.Add (!string.IsNullOrEmpty (item.Value)
-                    ? $"{ConvertInside (number / item.Key)}{item.Value}"
+                    ? $"{ConvertInside (number / item.Key)}{TrimMil (item, number)}"
                     : UnitsMap[number]);
                 number %= item.Key;
             }
 
             var toWords = string.Join (" ", parts.ToArray ()).TrimStart (' ');
             return toWords;
+        }
+
+        private static string TrimMil(KeyValuePair<int, string> item, int number) {
+            if (item.Key != 1000)
+                return item.Value;
+            var quotient = number / item.Key % 10;
+            return quotient < 2 || quotient > 9
+                ? item.Value
+                : item.Value.TrimStart (' ');
         }
 
         public static string ConvertToOrdinal(int number) {
