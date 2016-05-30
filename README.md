@@ -6,7 +6,13 @@ Humanize stuff with esperanto culture in mind
 
 [![demo gif](https://j.gifs.com/ERm0RW.gif)](https://www.youtube.com/watch?v=6hu93nFedms)
 
-You can try a demo of this code on [.NETFiddle](https://dotnetfiddle.net/7503Yh).
+You can try a demo of this code on [.NETFiddle](https://dotnetfiddle.net/E628F0).
+
+## How to use it
+
+    using Numbro;
+    string words = 42.ToWords();
+    Console.WriteLine(words); // output: kvardek du
 
 ## Acknowledgement
 
