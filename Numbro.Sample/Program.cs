@@ -3,14 +3,12 @@
 namespace Numbro.Sample {
     internal class Program {
         private static void Main() {
-            string input;
-            do {
-                input = Console.ReadLine ();
+            for (var input = Console.ReadLine (); !string.IsNullOrWhiteSpace (input); input = Console.ReadLine ()) {
                 int number;
                 Console.WriteLine (int.TryParse (input, out number)
-                    ? number.ToWords ()
+                       ? number.ToWords ()
                     : "not a valid number");
-            } while (!string.IsNullOrWhiteSpace (input));
+            }
 
             Console.ReadLine ();
         }
